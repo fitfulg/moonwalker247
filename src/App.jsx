@@ -3,14 +3,17 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import Header from './components/Header';
 import CoinSummaryPage from './pages/CoinSummaryPage';
 import "./App.css";
+import { WatchListContextProvider } from './context/watchListContext';
 
 const App = () => {
     return (
         <div>
-        <BrowserRouter>
-         <Header />
-          <Route exact path="/" component={CoinSummaryPage} />
-        </BrowserRouter>
+        <WatchListContextProvider>
+            <BrowserRouter>
+            <Header />
+            <Route exact path="/" component={CoinSummaryPage} />
+            </BrowserRouter>
+        </WatchListContextProvider>
         </div>
     )
 }
