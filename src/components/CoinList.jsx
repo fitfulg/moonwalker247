@@ -16,8 +16,8 @@ const CoinList = () => {
           params: {
             vs_currency: "usd",
             ids: watchList.join(","),
-          }
-        })
+          },
+        });
         setCoins(response.data);
         console.log(response.data);
         setIsLoading(false);
