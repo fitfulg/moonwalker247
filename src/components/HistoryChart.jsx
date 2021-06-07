@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import Chart from 'chart.js';
+import Chart from 'chart.js/auto';
 import { historyOptions } from '../chartConfigs/chartConfigs';
 
 const HistoryChart = ({ data }) => {
